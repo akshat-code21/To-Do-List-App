@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="bg-blue-200 text-black ">
+    <header class="flex justify-center items-center h-[10vh] bg-orange-300">
+      <h1 class="text-5xl font-bold">To Do List</h1>
+    </header>
+    <section>
+      <div
+        class="container  w-[40vw] bg-white border-2 border-black rounded-xl m-auto mt-[100px]"
+      >
+        <h3 class="m-[10px] p-[10px] font-semibold text-[30px] text-center">To-Do List</h3>
+        <div class="search-box">
+          <input
+            type="text"
+            name=""
+            id="addItems"
+            placeholder="Enter the task"
+            class="m-[10px] p-[10px] w-[80%] border-2 rounded-md"
+          />
+          <button
+            class="w-[15%] bg-orange-600 p-[10px] rounded-2xl text-white"
+            id="addBtn"
+          >
+            Add
+          </button>
+        </div>
+        <div id="display-box" class="display-box mt-[20px] ml-[20px]">
+          <ul
+            class="list-image-[url(circle-stroke-rounded.svg)]"
+            id="display-list"
+          >
+             <!-- <li
+              class="relative mt-[10px] ml-[13px] mb-[10px] p-[px] text-[20px] cursor-pointer"
+            >
+              Learn JS
+              <button
+                class="absolute right-1 top-1/2 transform -translate-y-1/2" id="clearTask" onclick="clearTask(this)"
+              >
+                <img
+                  src="src/cancel-01-stroke-rounded.svg"
+                  alt=""
+                  class="h-5 w-5"
+                />
+              </button>
+            </li> -->
+<!--
+            <li
+              class="relative mt-[10px] ml-[13px] mb-[10px] p-[px] text-[20px] cursor-pointer"
+            >
+              Build Projects
+              <button
+                class="absolute right-1 top-1/2 transform -translate-y-1/2" onclick="clearTask(this)" id="clearTask"
+              >
+                <img
+                  src="src/cancel-01-stroke-rounded.svg"
+                  alt=""
+                  class="h-5 w-5"
+                />
+              </button>
+            </li>
+            <li
+              class="relative mt-[10px] ml-[13px] mb-[10px] p-[px] text-[20px] cursor-pointer"
+            >
+              Deploy
+              <button
+                class="absolute right-1 top-1/2 transform -translate-y-1/2" id="clearTask" onclick="clearTask(this)"
+              >
+                <img
+                  src="src/cancel-01-stroke-rounded.svg"
+                  alt=""
+                  class="h-5 w-5"
+                />
+              </button>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

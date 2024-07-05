@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.checked {
+  color: grey;
+  text-decoration: line-through;
+}
+.unchecked {
+  /* reset css */
+  color: black;
+  text-decoration: none;
+}
