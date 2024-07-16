@@ -1,10 +1,16 @@
-console.log("this is script.js");
-
 const addItems = document.getElementById("addItems");
 const addBtn = document.getElementById("addBtn");
 const displayList = document.getElementById("display-list");
 let tasks = [];
-addBtn.addEventListener("click", () => {
+
+addBtn.addEventListener("click", addTask);
+addItems.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    addTask();
+  }
+});
+
+function addTask() {
   let task = addItems.value.trim(); 
   if (task === "") {
     alert("Please enter a task");
@@ -20,15 +26,6 @@ addBtn.addEventListener("click", () => {
   const newTask = createTaskElement(task);
   displayList.appendChild(newTask);
   setupTaskListeners(newTask);
-});
-
-function checkDuplicate(task) {
-  document.querySelectorAll("li").forEach((e) => {
-    console.log(e);
-    if (e === task) {
-      alert("This task already exists");
-    }
-  });
 }
 
 function createTaskElement(task) {
@@ -49,11 +46,9 @@ function createTaskElement(task) {
   return li;
 }
 
-
 function setupTaskListeners(taskElement) {
   taskElement.addEventListener("click", toggleTask);
 }
-
 
 function toggleTask() {
   this.classList.toggle("checked");
